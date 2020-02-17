@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rome</title>
+</head>
+<body>
+
+
+<form method="get" id="form">
+    <label>
+        <input type="text" name="text" id="txt">
+    </label>
+    <label>
+        <input type="submit" value="klik" name="submit" id="button">
+    </label>
+
+</form>
+<script type="module">
+    import {tellen} from "./library.mjs";
+
+    console.log(tellen('hallo,daar'));
+
+    const b = document.getElementById('form');
+
+    b.addEventListener('submit',function () {
+        const a  = document.getElementById('txt').value;
+        alert(tellen(a));
+    },false);
+
+</script>
+</body>
+</html>
